@@ -83,8 +83,7 @@ def export_data(client, current_datetime, temp_dir):
                 ).strftime('%Y-%m-%d %H:%M:%S')
     query = (
         f"SELECT * FROM {DATABASE}.{TABLE} "
-        f"WHERE {DATE_COLUMN} >= '{formatted_date}' AND {
-            DATE_COLUMN} < '{next_day}' "
+        f"WHERE {DATE_COLUMN} >= '{formatted_date}' AND {DATE_COLUMN} < '{next_day}' "
         f"AND id = '{DEVICE_ID}'"
     )
     fmt = 'CSVWithNames'  # Format for the output
